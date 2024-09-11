@@ -10,7 +10,19 @@
     <script type="text/babel">
       const appEl = document.querySelector("#app");
       const root = ReactDOM.createRoot(appEl);
-      root.render(<h1>こんにちは</h1>);
+      // componentsの頭文字は大文字に作成しよう
+      // function Example() {
+      //   return <h1>Hello Components</h1>
+      // }
+      const Example = () => {
+        // 複数行の場合は丸括弧で囲もう
+        return (
+          <div>
+            <h1>Hello Components!</h1>
+          </div>
+        )
+      }
+      root.render(<Example />);
     </script>
   </body>
 </html>
