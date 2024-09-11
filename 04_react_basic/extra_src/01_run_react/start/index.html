@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-   
-</head>
+    <head>
+        <!-- HTMLにreactと読み込む -->
+        <script src="../../../../libs/react.development.js"></script>
+        <script src="../../../../libs/react-dom.development.js"></script>
+        <script src="../../../../libs/babel-standalone.js"></script>
+    </head>
 <body>
-    
+    <div id="app"></div>
+    <script type="text/babel">
+        // reactのコードを書く場
+        const appEl = document.getElementById("#app")
+        // React18からの推奨の書き方
+        const root = ReactDOM.createRoot(appEl);
+        root.render(<h1>表示しろよ</h1>)
+    </script>
 </body>
 </html>
