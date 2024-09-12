@@ -1,5 +1,5 @@
 // import "./Example.css";
-import Child from "./components/Chlid.jsx"
+import Child from "../../073_practice_component/start/components/Chlid.jsx"
 
 const Example = () => {
     return (
