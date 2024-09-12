@@ -4,6 +4,7 @@ const Child = () => {
   return (
     // 감싸기위해 필요없는 div를 쓰지 말고 React.Fragment를 쓰자
     // 유일하게 key속성을 쓸수있다.
+    //<></>로도 감쌀 수 있지만 key속성을 쓰지 못한다.
     <React.Fragment> 
       <div className="component">
         <h3>Hello Component</h3>
