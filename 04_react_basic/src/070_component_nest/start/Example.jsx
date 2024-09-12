@@ -1,6 +1,12 @@
 // import "./Example.css";
-import Child from "./component/Child"
+import Child from "./components/Chlid.jsx"
 
-const Example = () => <Child></Child>;
+const Example = () => {
+    return (
+        <div>
+            <Child />
+        </div>
+    )
+};
 
 export default Example;
