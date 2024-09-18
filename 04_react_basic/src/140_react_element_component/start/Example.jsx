@@ -1,5 +1,8 @@
 import React from "react";
 
+const Hello = () => {
+  return <h2>Hello!</h2>
+}
 const Bye = () => {
       return <h2>GoodBye!</h2>;
 }
@@ -7,6 +10,7 @@ const Bye = () => {
 const Example = () => {
   return (
     <div>
+      <Hello />
       <Bye/>
     </div>
   );
