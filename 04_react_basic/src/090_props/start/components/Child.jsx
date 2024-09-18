@@ -16,7 +16,7 @@ const Child = ({ color, num, fn, bool, obj }) => {
         { fn(num) }
       </h3>
       <h3>{ bool ? "true" : "false" }</h3>
-      <h3>{obj.name + ", " + obj.age}</h3>
+      <h3>{ obj.name + ", " + obj.age }</h3>
     </div>
   );
 };
