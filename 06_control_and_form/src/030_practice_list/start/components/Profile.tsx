@@ -1,4 +1,10 @@
-const Profile = ({ name, age, hobbies }) => {
+type profileType = {
+  name: string
+  age: number
+  hobbies: string[]
+}
+
+const Profile = ({ name, age, hobbies }: profileType) => {
   return (
     <div>
       <hr />
