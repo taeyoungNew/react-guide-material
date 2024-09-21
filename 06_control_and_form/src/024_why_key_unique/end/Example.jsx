@@ -20,6 +20,7 @@ const Example = () => {
           <strong>{`key={ユニークキー}`}</strong>
           <ul>
             {inputs.map((input) => (
+              // 고유의 키와 값이 짝
               <li key={input.key}>
                 {input.key}: {input.value}
               </li>
@@ -30,6 +31,7 @@ const Example = () => {
           <strong>{`key={index}`}</strong>
           <ul>
             {inputs.map((input, index) => (
+              // 인덱스순서와 값이 짝
               <li key={index}>
                 {input.key}: {input.value}
               </li>
