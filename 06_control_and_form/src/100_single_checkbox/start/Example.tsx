@@ -1,4 +1,6 @@
 const Example = () => {
+  
+
   return (
     <p style={{ textAlign: "center" }}>
       startフォルダの内容が表示されます。
