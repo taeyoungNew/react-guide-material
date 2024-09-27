@@ -1,7 +1,13 @@
 import { useState } from "react";
+// import styled from "styled-components";
+
+
 
 import SubButton from "./components/SubButton";
-import "./Example.css";
+import styles from "./Example.module.css"
+
+
+console.log(styles);
 
 const Example = () => {
   const [isSelected, setIsSelected] = useState(false);
@@ -10,7 +16,10 @@ const Example = () => {
 
   return (
     <>
-      <button className={`btn ${isSelected ? "selected" : ""}`} onClick={clickHandler}>
+      <button 
+        className={`${styles.btn} ${isSelected ? styles.selected : ""}`} 
+        onClick={clickHandler}
+      >
         ボタン
       </button>
       <SubButton />

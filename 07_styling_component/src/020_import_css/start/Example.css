@@ -1,3 +1,7 @@
+/* 
+    component별로 css파일을 만들고 싶으면 component와 같은 
+    이름으로 한다.
+*/
 .btn {
     margin: auto;
     border-radius: 9999px;
