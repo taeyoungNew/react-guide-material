@@ -20,7 +20,7 @@ const Todo = () => {
 
   const [ todos, setTodos ] = useState(todosList);
 
-  const deleteTodo = (id) => {
+  const deleteTodo = (id: number) => {
     const newTodos = todos.filter((todo) => {
       return todo.id !== id;
     });
@@ -28,15 +28,22 @@ const Todo = () => {
     setTodos(newTodos);
   }
 
-  const createTodo = (todo) => {
+type TodoType = {
+    id: number;
+    content: string;
+}
+
+
+  const createTodo = (todo: TodoType) => {
     setTodos([...todos, todo]);
   }
 
   return (
-    <>
+    <div>
+      <h2>Reminder</h2>
       <List todos={todos} deleteTodo={deleteTodo}/>
       <Form createTodo={createTodo}/>
-    </>
+    </div>
   )
 };
 export default Todo;
