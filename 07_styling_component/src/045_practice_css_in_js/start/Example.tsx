@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+type ThirdButtonProps = {
+  dark: string
+}
+
 const FirstButton = styled.button`
   display: inline-block;
   border-radius: 3px;
@@ -7,9 +11,23 @@ const FirstButton = styled.button`
   margin: 0.5rem 1rem;
   width: 11rem;
   border: none;
+  background-color: pink;
 `;
 
+const SecondButton = styled(FirstButton)`
+  color: white;
+  background-color: red;
+
+`
+
+const ThirdButton = styled(SecondButton)<ThirdButtonProps>`
+  background-color: ${({dark}) => dark === "black" ? "black" : "green"};
+`
+
 const Example = () => {
+
+  
+
   return (
     <>
       <h3>練習問題</h3>
@@ -28,6 +46,9 @@ const Example = () => {
         </ul>
       </p>
       <FirstButton>ボタン1</FirstButton>
+      <SecondButton>ボタン2</SecondButton>
+      <ThirdButton dark={""}>ボタン3</ThirdButton>
+      <ThirdButton dark={"black"}>ボタン4</ThirdButton>
     </>
   );
 };
