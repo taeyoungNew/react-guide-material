@@ -1,0 +1,33 @@
+.btn {
+    margin: auto;
+    border-radius: 9999px;
+    border: none;
+    display: block;
+    width: 120px;
+    height: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    background: orange;
+}
+
+/* マウスでクリックしたとき */
+.btn:hover {
+    background-color: aquamarine;
+}
+
+/* マウスで触れたとき */
+.btn:active {
+    background-color: purple;
+}
+
+
+.selected {
+    background-color: pink;
+}
+
+/* 画面の幅が700px以下の時　*/
+@media (max-width: 700px) {
+    .btn {
+        border-radius: 0;
+    }
+}
