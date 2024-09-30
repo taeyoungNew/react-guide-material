@@ -13,13 +13,27 @@ import Modal from "./components/Modal";
 それらの制限なく、子要素が親要素を「飛び出して」表示する必要があるときにcreatePortalを使うのが有効です。
 モーダル、ポップアップ、トーストは使用の代表例です。
 */
+type ModalPortalType = {
+  children: React.ReactNode
+}
+
+const ModalPortal = ({ children }: ModalPortalType) => {
+  // as Element를 안붙이면  유니온타입이 되버림
+  const target = document.querySelector(".container.start") as Element
+  return createPortal(children, target)
+}
 
 const Example = () => {
   const [modalOpen, setModalOpen] = useState(false);
   return (
-    <div>
-      <div className="container start"></div>
+    // 버블링으로 인해 부모의 div태그에서 반응
+    // Modal로 인해 DOM트리상으로는 container밑에 모달이 생기지만 
+    // react요소트리상으로는 ModalPortal이 밑에있는 div의 자식으로 들어가기때문에 
+    // constainer라는 클래스이름을 가진 div가 버블링에 반응하지 않는다.
+    <div onClick={() => console.log("空のdiv")}>
+      <div className="container start"  onClick={() => console.log("container")}>
 
+      </div>
       <button
         type="button"
         onClick={() => setModalOpen(true)}
@@ -27,7 +41,12 @@ const Example = () => {
       >
         モーダルを表示する
       </button>
-      {modalOpen && <Modal handleCloseClick={() => setModalOpen(false)} />}
+      {modalOpen && 
+      (
+        <ModalPortal>
+          <Modal handleCloseClick={() => setModalOpen(false)} />
+        </ModalPortal>
+      )}
     </div>
   );
 };
