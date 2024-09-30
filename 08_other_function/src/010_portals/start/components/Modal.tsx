@@ -1,6 +1,10 @@
 import "./Modal.css";
 
-const Modal = ({ handleCloseClick }) => {
+type ModalPropsType = {
+  handleCloseClick: (value: React.MouseEvent<HTMLButtonElement>) => void
+}
+
+const Modal = ({ handleCloseClick }: ModalPropsType) => {
   return (
     <div className="modal">
       <div className="modal__content">
