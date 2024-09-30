@@ -3,7 +3,8 @@ import { createPortal } from "react-dom";
 import Modal from "./components/Modal";
 
 /* POINT createPortalの使い方
-第一引数: React の子要素としてレンダー可能なもの （要素、文字列、フラグメント、コンポーネントなど）
+第一引数: React の子要素としてレンダー可能なもの （
+         要素、文字列、フラグメント、コンポーネントなど）
 第二引数: レンダー先のDOM要素
 */
 
