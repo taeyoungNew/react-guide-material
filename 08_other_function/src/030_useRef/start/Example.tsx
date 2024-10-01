@@ -89,6 +89,7 @@ const Case3 = () => {
       </p>
       <p>
         ref: {ref.current}
+        {/* ref */}
         <button onClick={updateRef}>更新</button>
       </p>
     </div>
