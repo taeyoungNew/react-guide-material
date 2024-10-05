@@ -10,7 +10,6 @@ import { useRef, forwardRef } from "react";
 //   ref: React.RefObject<HTMLInputElement>
 // }
 
-type Ref = HTMLInputElement
 // 첫번째인자는 반드시 props이기때문에 props를 받아야하고 ref는 그 다음에 받아야한다.
 const InputCom = forwardRef<HTMLInputElement>((props, ref) => {
   return (<input type="text" ref={ref} />)

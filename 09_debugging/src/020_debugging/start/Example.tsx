@@ -1,7 +1,13 @@
 import { useState } from "react"
 
-const Child = (countNum) => {
-  return <p>現在のカウント数: {countNum.val}</p>
+type ChildProps =  {
+  count: {
+    val: number;
+  }
+}
+
+const Child = ({ count }: ChildProps) => {
+  return <p>現在のカウント数: {count.val}</p>
 }
 
 const Example = () => {
