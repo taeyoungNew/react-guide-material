@@ -1,4 +1,5 @@
 const Example = () => {
+
   // immutabilliyの保持
   // 引数で渡された値を変更しない
   const num = { val: 2 }
@@ -13,6 +14,13 @@ const Example = () => {
   
   console.log('newNum', newNum, 'num', num)
   console.log(newNum === num);
+
+  // 
+  const double2 = (num: { val : number}) => {
+    const newNum = { val : 0 }
+    newNum.val = num.val * 2
+    return newNum
+  }
 
   return (
     <>
