@@ -5,6 +5,7 @@ type ChildPurePropsType = {
   value: number
 }
 
+// 純粋関数
 const ChildPure = ({ value }: ChildPurePropsType) => {
   return (
     <>
