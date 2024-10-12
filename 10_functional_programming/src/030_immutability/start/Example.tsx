@@ -1,11 +1,19 @@
 const Example = () => {
-  // 渡された値を変更しない
-  const num = { val : 2 }
-  //　副作用
-  // const double = () => {
-  //   num.val = num.val * 2
-  //   return num;
-  // }
+
+  // immutabilliyの保持
+  // 引数で渡された値を変更しない
+  const num = { val: 2 }
+  const double = (num: { val: number }) => {
+    // 関数外にある値を関数内で変更している
+    // num.val = num.val * 2;
+    const newNum = { val: num.val * 2 }
+    return newNum;
+  }
+
+  const newNum = double(num);
+  
+  console.log('newNum', newNum, 'num', num)
+  console.log(newNum === num);
 
   // 
   const double2 = (num: { val : number}) => {
@@ -14,7 +22,6 @@ const Example = () => {
     return newNum
   }
 
-  
   return (
     <>
       <h3>不変性（Immutability）</h3>
