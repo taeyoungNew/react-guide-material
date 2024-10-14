@@ -14,7 +14,17 @@ const todosList = [
 ];
 
 const Example = () => {
-  const $ = {};
+  // type $type = {
+  //   app: HTMLElement,
+  //   list: HTMLElement,
+  //   input: HTMLInputElement,
+  //   addBtn: HTMLButtonElement
+    
+  // }
+  let $ = {
+    app: window.document.querySelector("#todo-js-app"),
+
+  };
 
   const init = () => {
     $.app = window.document.querySelector("#todo-js-app");
